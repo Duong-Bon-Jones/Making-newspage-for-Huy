@@ -1,0 +1,129 @@
+@import "./normalize.css";
+
+:root {
+  --color-primary: #0d6efd;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Typography */
+::selection {
+  background: #2584ff;
+  color: white;
+}
+/* 
+html {
+  font-size: 62.5%;
+} */
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+#bootstrap-overrides h1 {
+  margin-bottom: 0;
+}
+
+.link {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+/* Input */
+.search-bar {
+  border-bottom: 1px solid gray;
+  box-shadow: 0 0 5px 1px grey;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 5;
+  overflow: hidden;
+  background: #f8f8f8;
+}
+
+.input {
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+.body-content {
+  margin: 6rem 1rem 0;
+}
+
+/* Grids */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.main-grid {
+  display: grid;
+  gap: 1rem;
+  grid-column-start: 2;
+  margin-top: 1rem;
+}
+
+.side-grid {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  position: fixed;
+  width: 200px;
+  display: none;
+}
+
+.right-grid {
+  grid-column-start: 3;
+  display: none;
+  align-self: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: 1fr 3fr 1.5fr;
+  }
+
+  .side-grid,
+  .right-grid {
+    display: grid;
+    gap: 1rem;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* Cards */
+#bootstrap-overrides .card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-media {
+  width: 100%;
+  max-width: 150px;
+  padding: 1rem;
+}
+
+.card-media > img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Lists */
+.list > li {
+  color: var(--color-primary);
+}
+
+.list .link {
+  font-size: 1rem;
+}
