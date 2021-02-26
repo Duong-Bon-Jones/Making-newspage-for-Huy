@@ -1,0 +1,60 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+$color-body: rgb(32, 33, 36);
+$color-link: rgb(26, 115, 232);
+
+@mixin flex-space_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Typography
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: $color-body;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+// Links
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link--title {
+  color: $color-link;
+}
+
+.link--article {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Section title
+.section-title {
+  @include flex-space_between();
+  margin-top: 2.4rem;
+}
