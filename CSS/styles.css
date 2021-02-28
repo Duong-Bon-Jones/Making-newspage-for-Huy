@@ -30,10 +30,10 @@ h2 {
 
 .link {
   text-decoration: none;
-  color: inherit;
+  color: #202124;
 }
 
-.link--title {
+.link--blue {
   color: #1a73e8;
 }
 
@@ -52,5 +52,23 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 2.4rem;
+}
+
+.section__heading {
+  font-weight: 500;
+}
+
+.news__list {
+  padding: 1.5rem 3.5rem 0;
+  color: #1a73e8;
+  gap: 2rem;
+}
+
+.news__list h4 {
+  font-size: 1.5rem;
+}
+
+.news__list .list__item {
+  margin-bottom: 2rem;
 }
 /*# sourceMappingURL=styles.css.map */
