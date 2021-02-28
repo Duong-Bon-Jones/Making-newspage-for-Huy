@@ -32,6 +32,7 @@ body {
 }
 
 .body {
+    margin-top: 6rem;
     padding: 1.6rem 1.6rem 3.2rem;
 }
 
@@ -171,5 +172,42 @@ h2 {
 @media screen and (min-width: 768px) {
     .news__content {
         margin-right: 13rem;
+    }
+}
+
+// Search bar
+.search-bar {
+    padding: 1rem;
+    @include flex-center();
+    border-bottom: 1px solid gray;
+    box-shadow: 0 0 5px 2px gray;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fcfcfc;
+}
+
+.form--input {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.input {
+    padding: 1.5rem 4rem;
+    outline: 0;
+    border-radius: 10px;
+    background-color: #f1f3f4;
+    border: 0;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    box-shadow: 0 0 3px 0px gray;
+    width: 100%;
+
+    &::placeholder {
+        opacity: 0.5;
+    }
+
+    &:focus {
+        background-color: white;
     }
 }

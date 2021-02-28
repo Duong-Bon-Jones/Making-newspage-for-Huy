@@ -17,6 +17,7 @@ body {
 }
 
 .body {
+  margin-top: 6rem;
   padding: 1.6rem 1.6rem 3.2rem;
 }
 
@@ -175,5 +176,64 @@ h2 {
   .news__content {
     margin-right: 13rem;
   }
+}
+
+.search-bar {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid gray;
+  -webkit-box-shadow: 0 0 5px 2px gray;
+          box-shadow: 0 0 5px 2px gray;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fcfcfc;
+}
+
+.form--input {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.input {
+  padding: 1.5rem 4rem;
+  outline: 0;
+  border-radius: 10px;
+  background-color: #f1f3f4;
+  border: 0;
+  font-size: 1.5rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0 0 3px 0px gray;
+          box-shadow: 0 0 3px 0px gray;
+  width: 100%;
+}
+
+.input::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
+.input:-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.input::-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.input::placeholder {
+  opacity: 0.5;
+}
+
+.input:focus {
+  background-color: white;
 }
 /*# sourceMappingURL=styles.css.map */
