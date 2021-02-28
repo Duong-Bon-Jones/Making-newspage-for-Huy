@@ -13,6 +13,11 @@ body {
   color: #202124;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
+  margin: 0;
+}
+
+.body {
+  padding: 1.6rem 1.6rem 3.2rem;
 }
 
 h1,
@@ -22,10 +27,15 @@ h4,
 h5,
 h6 {
   margin: 0;
+  font-weight: 600;
 }
 
 h2 {
   font-size: 2rem;
+}
+
+.right-align {
+  text-align: right;
 }
 
 .link {
@@ -59,7 +69,7 @@ h2 {
 }
 
 .news__list {
-  padding: 1.5rem 3.5rem 0;
+  padding: 0 2rem;
   color: #1a73e8;
   gap: 2rem;
 }
@@ -70,5 +80,100 @@ h2 {
 
 .news__list .list__item {
   margin-bottom: 2rem;
+}
+
+.link__img {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  bottom: auto;
+  left: auto;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.link__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.news-card {
+  border: 1px solid #dadce0;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.news__header {
+  padding: 1.6rem 13rem 1.6rem 1.6rem;
+}
+
+.header__source {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.header__source small {
+  margin-right: 0.5rem;
+}
+
+.header__source time {
+  font-size: 1.2rem;
+  color: inherit;
+  opacity: 0.7;
+}
+
+.header__source time::before {
+  font-size: 0.5625rem;
+  content: "\0000a0\002022\0000a0";
+  margin-right: 0.25rem;
+}
+
+.news__content {
+  padding: 0 1.6rem;
+}
+
+.news__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.news__footer a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 1.6rem;
+}
+
+.news__icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0 0.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .news__content {
+    margin-right: 13rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

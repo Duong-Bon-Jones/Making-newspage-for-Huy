@@ -13,6 +13,12 @@ $color-blue: rgb(26, 115, 232);
     align-items: center;
 }
 
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 // Typography
 html {
     font-size: 62.5%;
@@ -22,6 +28,11 @@ body {
     color: $color-body;
     font-family: "Inter", Arial, Helvetica, sans-serif;
     font-size: 1.6rem;
+    margin: 0;
+}
+
+.body {
+    padding: 1.6rem 1.6rem 3.2rem;
 }
 
 h1,
@@ -31,10 +42,15 @@ h4,
 h5,
 h6 {
     margin: 0;
+    font-weight: 600;
 }
 
 h2 {
     font-size: 2rem;
+}
+
+.right-align {
+    text-align: right;
 }
 
 // Links
@@ -65,7 +81,7 @@ h2 {
 
 // News content
 .news__list {
-    padding: 1.5rem 3.5rem 0;
+    padding: 0 2rem;
     color: $color-blue;
     gap: 2rem;
 
@@ -75,5 +91,85 @@ h2 {
 
     .list__item {
         margin-bottom: 2rem;
+    }
+}
+
+// Link images
+.link__img {
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    bottom: auto;
+    left: auto;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0;
+}
+
+// News card
+.news-card {
+    border: 1px solid #dadce0;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.news__header {
+    padding: 1.6rem 13rem 1.6rem 1.6rem;
+}
+
+.header__source {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+
+    small {
+        margin-right: 0.5rem;
+    }
+
+    time {
+        font-size: 1.2rem;
+        color: inherit;
+        opacity: 0.7;
+        &::before {
+            font-size: 0.5625rem;
+            content: "\0000a0\002022\0000a0";
+            margin-right: 0.25rem;
+        }
+    }
+}
+
+.news__content {
+    padding: 0 1.6rem;
+    // margin-right: 13rem;
+}
+
+.news__footer {
+    display: flex;
+    a {
+        @include flex-center();
+        margin: 1rem 1.6rem;
+    }
+}
+
+.news__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0 0.8rem;
+}
+
+@media screen and (min-width: 768px) {
+    .news__content {
+        margin-right: 13rem;
     }
 }
