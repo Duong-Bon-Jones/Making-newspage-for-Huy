@@ -6,6 +6,7 @@
 
 $color-body: rgb(32, 33, 36);
 $color-blue: rgb(26, 115, 232);
+$color-inactive: #5f6368;
 
 @mixin flex-space_between {
     display: flex;
@@ -210,4 +211,45 @@ h2 {
     &:focus {
         background-color: white;
     }
+}
+
+// Nav side bar
+.side-bar {
+    max-width: 280px;
+}
+
+.bar__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+
+    &:hover {
+        color: $color-blue;
+        .bar__icon {
+            color: $color-blue;
+        }
+    }
+
+    &:focus {
+        background: rgba(66, 133, 244, 0.149);
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        color: $color-blue;
+        .bar__icon {
+            color: $color-blue;
+        }
+    }
+}
+
+.bar__icon {
+    @include flex-center();
+    height: 2.4rem;
+    width: 2.4rem;
+    margin: 0 1.6rem;
+    color: $color-inactive;
+}
+
+.bar__title {
+    font-weight: 500;
 }

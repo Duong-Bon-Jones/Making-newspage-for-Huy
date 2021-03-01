@@ -236,4 +236,60 @@ h2 {
 .input:focus {
   background-color: white;
 }
+
+.side-bar {
+  max-width: 280px;
+}
+
+.bar__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.bar__link:hover {
+  color: #1a73e8;
+}
+
+.bar__link:hover .bar__icon {
+  color: #1a73e8;
+}
+
+.bar__link:focus {
+  background: rgba(66, 133, 244, 0.149);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: #1a73e8;
+}
+
+.bar__link:focus .bar__icon {
+  color: #1a73e8;
+}
+
+.bar__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2.4rem;
+  width: 2.4rem;
+  margin: 0 1.6rem;
+  color: #5f6368;
+}
+
+.bar__title {
+  font-weight: 500;
+}
 /*# sourceMappingURL=styles.css.map */
