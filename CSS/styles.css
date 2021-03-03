@@ -172,7 +172,13 @@ h2 {
   margin: 0 0.8rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .news__content {
+    margin-right: 13rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .news__content {
     margin-right: 13rem;
   }
@@ -195,12 +201,19 @@ h2 {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #fcfcfc;
+  z-index: 2;
+  background: #1a73e8;
 }
 
 .form--input {
   width: 50%;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .form--input {
+    width: 494px;
+  }
 }
 
 .input {
@@ -238,7 +251,15 @@ h2 {
 }
 
 .side-bar {
-  max-width: 280px;
+  max-width: 260px;
+  display: none;
+  margin-top: 10rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .side-bar {
+    display: block;
+  }
 }
 
 .bar__link {
@@ -291,5 +312,32 @@ h2 {
 
 .bar__title {
   font-weight: 500;
+}
+
+.body {
+  max-width: 768px;
+}
+
+@media screen and (max-width: 480px) {
+  .body {
+    margin: 6rem auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .body {
+    margin: 6rem auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x2 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: unset;
+        grid-template-rows: unset;
+    -ms-grid-columns: 1fr 3fr;
+        grid-template-columns: 1fr 3fr;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -7,6 +7,9 @@
 $color-body: rgb(32, 33, 36);
 $color-blue: rgb(26, 115, 232);
 $color-inactive: #5f6368;
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
 
 @mixin flex-space_between {
     display: flex;
@@ -18,6 +21,22 @@ $color-inactive: #5f6368;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin mobile {
+    @media screen and (max-width: #{$mobile-width}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media screen and (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media screen and (min-width: #{$desktop-width}) {
+        @content;
+    }
 }
 
 // Typography
@@ -170,8 +189,11 @@ h2 {
     margin: 0 0.8rem;
 }
 
-@media screen and (min-width: 768px) {
-    .news__content {
+.news__content {
+    @include tablet() {
+        margin-right: 13rem;
+    }
+    @include desktop() {
         margin-right: 13rem;
     }
 }
@@ -185,12 +207,17 @@ h2 {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #fcfcfc;
+    z-index: 2;
+    background: $color-blue;
 }
 
 .form--input {
     width: 50%;
+
     margin: 0 auto;
+    @include desktop() {
+        width: 494px;
+    }
 }
 
 .input {
@@ -215,7 +242,13 @@ h2 {
 
 // Nav side bar
 .side-bar {
-    max-width: 280px;
+    max-width: 260px;
+    display: none;
+    margin-top: 10rem;
+
+    @include desktop() {
+        display: block;
+    }
 }
 
 .bar__link {
@@ -252,4 +285,28 @@ h2 {
 
 .bar__title {
     font-weight: 500;
+}
+
+// Body content
+.body {
+    max-width: 768px;
+    @include mobile() {
+        margin: 6rem auto;
+    }
+    @include tablet() {
+        margin: 6rem auto;
+    }
+}
+
+// Grid
+@mixin grid($gridrow, $gridcol) {
+    display: grid;
+    grid-template-rows: $gridrow;
+    grid-template-columns: $gridcol;
+}
+
+@include desktop() {
+    .grid--1x2 {
+        @include grid(unset, 1fr 3fr);
+    }
 }
