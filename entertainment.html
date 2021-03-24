@@ -8,50 +8,92 @@
         />
     </form>
 </div>
-<div id="top-stories">
-    <div class="grid--1x2">
-        <div class="side-bar">
-            <div class="bar__item">
-                <a class="link bar__link" href="/top-stories.html">
-                    <div class="bar__icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <div class="bar__title">
-                        <span>Top Stories</span>
-                    </div>
-                </a>
+<div class="grid--1x2">
+    <div class="side-bar">
+        <div class="bar__item">
+            <a class="link bar__link" href="/top-stories.html">
+                <div class="bar__icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="bar__title">
+                    <span>Top Stories</span>
+                </div>
+            </a>
+        </div>
+        <div class="bar__item">
+            <a class="link bar__link" href="#">
+                <div class="bar__icon">
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="bar__title"><span>Following</span></div>
+            </a>
+        </div>
+        <div class="bar__item">
+            <a class="link bar__link" href="#">
+                <div class="bar__icon">
+                    <i class="fas fa-film"></i>
+                </div>
+                <div class="bar__title">
+                    <span>Entertainment</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="body">
+        <div class="page--title">
+            <div class="page__header">
+                <div class="header__icon">
+                    <img
+                        src="https://lh6.ggpht.com/M-7V3aFj1BEw9EYBVHdLFmjCerci3j2MvsB43zu6-9iu-znG_WuOYrz5urJlStV5n59mW0WY5Q=p-rw"
+                        alt=""
+                    />
+                </div>
+                <div class="header__text">
+                    <h2>Entertainment</h2>
+                </div>
             </div>
-            <div class="bar__item">
-                <a class="link bar__link" href="#">
-                    <div class="bar__icon">
-                        <i class="far fa-star"></i>
-                    </div>
-                    <div class="bar__title"><span>Following</span></div>
-                </a>
-            </div>
-            <div class="bar__item">
-                <a class="link bar__link" href="#">
-                    <div class="bar__icon">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <div class="bar__title">
-                        <span>Entertainment</span>
-                    </div>
-                </a>
+            <div class="btn--container">
+                <button class="btn--link">
+                    <i class="far fa-star"></i>
+                    <span>Follow</span>
+                </button>
+                <button class="btn--link">
+                    <i class="fas fa-share-alt"></i>
+                    <span>Share</span>
+                </button>
             </div>
         </div>
-        <div class="body">
-            <div class="section-title">
-                <div>
-                    <a class="link" href="#">
-                        <h2 class="section__heading">Headlines</h2>
-                    </a>
-                    <small>Headlines all around the world</small>
-                </div>
-                <a class="link link--blue" href="#">More Headlines</a>
-            </div>
+        <!-- Tab links -->
+        <div class="tab">
+            <button
+                class="tablinks"
+                onclick="openCity(event, 'latest')"
+                id="defaultOpen"
+            >
+                Latest
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'movies')">
+                Movies
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'music')">
+                Music
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'TV')">TV</button>
+            <button class="tablinks" onclick="openCity(event, 'books')">
+                Books
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'art')">
+                Art
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'celebrities')">
+                Celebrities
+            </button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="latest" class="tabcontent">
             <div class="news-card">
-                <header class="news__header">
+                <article class="news__header">
                     <h3>
                         <a class="link link--article" href="#"
                             >Huy Hung's IPO win big, the company's now worth $50
@@ -64,7 +106,7 @@
                         </small>
                         <time datetime="2021-02-28T03:42:39Z">2 hour ago</time>
                     </div>
-                </header>
+                </article>
                 <a href="#">
                     <figure class="link__img">
                         <img src="./images/avatar.jpg" alt="" />
@@ -75,27 +117,24 @@
                         <li class="list__item">
                             <a class="link link--article" href="#">
                                 <h4>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Libero odio nihil, eos
-                                    saepe quisquam omnis.
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Adipisci, exercitationem!
                                 </h4>
                             </a>
                         </li>
                         <li class="list__item">
                             <a class="link link--article" href="#">
                                 <h4>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Libero odio nihil, eos
-                                    saepe quisquam omnis.
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Adipisci, exercitationem!
                                 </h4>
                             </a>
                         </li>
                         <li class="list__item">
                             <a class="link link--article" href="#">
                                 <h4>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Libero odio nihil, eos
-                                    saepe quisquam omnis.
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Adipisci, exercitationem!
                                 </h4>
                             </a>
                         </li>
@@ -112,7 +151,7 @@
                 </div>
             </div>
             <div class="news-card">
-                <header class="news__header">
+                <article class="news__header">
                     <h3>
                         <a class="link link--article" href="#"
                             >Huy Hung's IPO win big, the company's now worth $50
@@ -125,7 +164,7 @@
                         </small>
                         <time datetime="2021-02-28T03:42:39Z">2 hour ago</time>
                     </div>
-                </header>
+                </article>
                 <a href="#">
                     <figure class="link__img">
                         <img src="./images/avatar.jpg" alt="" />
@@ -136,27 +175,24 @@
                         <li class="list__item">
                             <a class="link link--article" href="#">
                                 <h4>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Libero odio nihil, eos
-                                    saepe quisquam omnis.
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Adipisci, exercitationem!
                                 </h4>
                             </a>
                         </li>
                         <li class="list__item">
                             <a class="link link--article" href="#">
                                 <h4>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Libero odio nihil, eos
-                                    saepe quisquam omnis.
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Adipisci, exercitationem!
                                 </h4>
                             </a>
                         </li>
                         <li class="list__item">
                             <a class="link link--article" href="#">
                                 <h4>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Libero odio nihil, eos
-                                    saepe quisquam omnis.
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Adipisci, exercitationem!
                                 </h4>
                             </a>
                         </li>
@@ -172,8 +208,11 @@
                     </a>
                 </div>
             </div>
+        </div>
+
+        <div id="movies" class="tabcontent">
             <div class="news-card">
-                <header class="news__header">
+                <article class="news__header">
                     <h3>
                         <a class="link link--article" href="#"
                             >Huy Hung's IPO win big, the company's now worth $50
@@ -186,7 +225,7 @@
                         </small>
                         <time datetime="2021-02-28T03:42:39Z">2 hour ago</time>
                     </div>
-                </header>
+                </article>
                 <a href="#">
                     <figure class="link__img">
                         <img src="./images/avatar.jpg" alt="" />
@@ -197,27 +236,24 @@
                         <li class="list__item">
                             <a class="link link--article" href="#">
                                 <h4>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Libero odio nihil, eos
-                                    saepe quisquam omnis.
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Adipisci, exercitationem!
                                 </h4>
                             </a>
                         </li>
                         <li class="list__item">
                             <a class="link link--article" href="#">
                                 <h4>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Libero odio nihil, eos
-                                    saepe quisquam omnis.
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Adipisci, exercitationem!
                                 </h4>
                             </a>
                         </li>
                         <li class="list__item">
                             <a class="link link--article" href="#">
                                 <h4>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Libero odio nihil, eos
-                                    saepe quisquam omnis.
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Adipisci, exercitationem!
                                 </h4>
                             </a>
                         </li>
@@ -233,6 +269,27 @@
                     </a>
                 </div>
             </div>
+        </div>
+
+        <div id="music" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+        <div id="TV" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+        <div id="books" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+        <div id="art" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+        <div id="celebrities" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
         </div>
     </div>
 </div>
