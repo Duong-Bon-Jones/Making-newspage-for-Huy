@@ -44,6 +44,12 @@ $desktop-width: 1024px;
     }
 }
 
+@mixin tabletanddesktop {
+    @media screen and (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
 // Typography
 html {
     font-size: 62.5%;
@@ -104,10 +110,12 @@ h2 {
 .news__list {
     padding: 0 2rem;
     color: $color-blue;
-    gap: 2rem;
-
+    // list-style-position: outside;
+    // display: inline;
+    // list-style: disc;
     h4 {
         font-size: 1.5rem;
+        display: inline;
     }
 
     .list__item {
@@ -360,6 +368,7 @@ h2 {
 .page--title {
     padding: 3.2rem 0;
     @include flex-center-align();
+    flex-wrap: wrap;
 }
 
 .page__header {
@@ -404,13 +413,13 @@ h2 {
 
 .btn--link {
     margin-left: 1.2rem;
-    @include flex-center-align();
-    border-radius: 1.6rem;
-    padding: 0.8rem 1.8rem;
-    min-height: 3.2rem;
-    min-width: 3.2rem;
+    @include flex-center();
+
     outline: 0;
     border: 0;
+    border-radius: 50%;
+    min-height: 3.2rem;
+    min-width: 3.2rem;
     cursor: pointer;
     background: white;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 16%);
@@ -419,10 +428,18 @@ h2 {
     }
     i {
         color: blue;
-        margin: 0 3px;
     }
+
     span {
         margin: 0 3px;
         font-size: 1.6rem;
+        display: none;
+    }
+    @media screen and (min-width: 560px) {
+        padding: 0.8rem 1.8rem;
+        span {
+            display: block;
+        }
+        border-radius: 1.6rem;
     }
 }
