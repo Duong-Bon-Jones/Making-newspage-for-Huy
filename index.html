@@ -18,21 +18,267 @@
         ></script>
     </head>
     <body>
+        <div class="search-bar">
+            <span onclick="openNav()"><i class="fas fa-bars"></i></span>
+            <form class="form--input" method="GET" role="search">
+                <input
+                    class="input"
+                    autocomplete="off"
+                    placeholder="Search ..."
+                    type="text"
+                />
+            </form>
+        </div>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
                 >&times;</a
             >
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+            <div class="bar__item">
+                <a class="link bar__link" href="/index.html">
+                    <div class="bar__icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="bar__title">
+                        <span>Top Stories</span>
+                    </div></a
+                >
+            </div>
+            <div class="bar__item">
+                <a class="link bar__link" href="/following.html">
+                    <div class="bar__icon">
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="bar__title"><span>Following</span></div>
+                </a>
+            </div>
+            <div class="bar__item">
+                <a class="link bar__link" href="/entertainment.html">
+                    <div class="bar__icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="bar__title">
+                        <span>Entertainment</span>
+                    </div>
+                </a>
+            </div>
         </div>
 
         <!-- Use any element to open the sidenav -->
-        <span onclick="openNav()">open</span>
 
-        <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page) -->
-        <div id="main">...</div>
+        <div id="main">
+            <div id="top-stories">
+                <div class="body">
+                    <div class="section-title">
+                        <div>
+                            <a class="link" href="#">
+                                <h2 class="section__heading">Headlines</h2>
+                            </a>
+                            <small>Headlines all around the world</small>
+                        </div>
+                        <a class="link link--blue" href="#">More Headlines</a>
+                    </div>
+                    <div class="news-card">
+                        <header class="news__header">
+                            <h3>
+                                <a class="link link--article" href="#"
+                                    >Huy Hung's IPO win big, the company's now
+                                    worth $50 billions</a
+                                >
+                            </h3>
+                            <div class="header__source">
+                                <small>
+                                    <a class="link" href="#">New York Post</a>
+                                </small>
+                                <time datetime="2021-02-28T03:42:39Z"
+                                    >2 hour ago</time
+                                >
+                            </div>
+                        </header>
+                        <a href="#">
+                            <figure class="link__img">
+                                <img src="./images/avatar.jpg" alt="" />
+                            </figure>
+                        </a>
+                        <div class="news__content">
+                            <ul class="news__list">
+                                <li class="list__item">
+                                    <a class="link link--article" href="#">
+                                        <h4>
+                                            Lorem ipsum dolor, sit amet
+                                            consectetur adipisicing elit. Libero
+                                            odio nihil, eos saepe quisquam
+                                            omnis.
+                                        </h4>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a class="link link--article" href="#">
+                                        <h4>
+                                            Lorem ipsum dolor, sit amet
+                                            consectetur adipisicing elit. Libero
+                                            odio nihil, eos saepe quisquam
+                                            omnis.
+                                        </h4>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a class="link link--article" href="#">
+                                        <h4>
+                                            Lorem ipsum dolor, sit amet
+                                            consectetur adipisicing elit. Libero
+                                            odio nihil, eos saepe quisquam
+                                            omnis.
+                                        </h4>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="news__footer">
+                            <a class="link link--blue link--article" href="#">
+                                <img
+                                    class="news__icon"
+                                    src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w32"
+                                    alt=""
+                                />View Full Article
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <header class="news__header">
+                            <h3>
+                                <a class="link link--article" href="#"
+                                    >Huy Hung's IPO win big, the company's now
+                                    worth $50 billions</a
+                                >
+                            </h3>
+                            <div class="header__source">
+                                <small>
+                                    <a class="link" href="#">New York Post</a>
+                                </small>
+                                <time datetime="2021-02-28T03:42:39Z"
+                                    >2 hour ago</time
+                                >
+                            </div>
+                        </header>
+                        <a href="#">
+                            <figure class="link__img">
+                                <img src="./images/avatar.jpg" alt="" />
+                            </figure>
+                        </a>
+                        <div class="news__content">
+                            <ul class="news__list">
+                                <li class="list__item">
+                                    <a class="link link--article" href="#">
+                                        <h4>
+                                            Lorem ipsum dolor, sit amet
+                                            consectetur adipisicing elit. Libero
+                                            odio nihil, eos saepe quisquam
+                                            omnis.
+                                        </h4>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a class="link link--article" href="#">
+                                        <h4>
+                                            Lorem ipsum dolor, sit amet
+                                            consectetur adipisicing elit. Libero
+                                            odio nihil, eos saepe quisquam
+                                            omnis.
+                                        </h4>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a class="link link--article" href="#">
+                                        <h4>
+                                            Lorem ipsum dolor, sit amet
+                                            consectetur adipisicing elit. Libero
+                                            odio nihil, eos saepe quisquam
+                                            omnis.
+                                        </h4>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="news__footer">
+                            <a class="link link--blue link--article" href="#">
+                                <img
+                                    class="news__icon"
+                                    src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w32"
+                                    alt=""
+                                />View Full Article
+                            </a>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <header class="news__header">
+                            <h3>
+                                <a class="link link--article" href="#"
+                                    >Huy Hung's IPO win big, the company's now
+                                    worth $50 billions</a
+                                >
+                            </h3>
+                            <div class="header__source">
+                                <small>
+                                    <a class="link" href="#">New York Post</a>
+                                </small>
+                                <time datetime="2021-02-28T03:42:39Z"
+                                    >2 hour ago</time
+                                >
+                            </div>
+                        </header>
+                        <a href="#">
+                            <figure class="link__img">
+                                <img src="./images/avatar.jpg" alt="" />
+                            </figure>
+                        </a>
+                        <div class="news__content">
+                            <ul class="news__list">
+                                <li class="list__item">
+                                    <a class="link link--article" href="#">
+                                        <h4>
+                                            Lorem ipsum dolor, sit amet
+                                            consectetur adipisicing elit. Libero
+                                            odio nihil, eos saepe quisquam
+                                            omnis.
+                                        </h4>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a class="link link--article" href="#">
+                                        <h4>
+                                            Lorem ipsum dolor, sit amet
+                                            consectetur adipisicing elit. Libero
+                                            odio nihil, eos saepe quisquam
+                                            omnis.
+                                        </h4>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a class="link link--article" href="#">
+                                        <h4>
+                                            Lorem ipsum dolor, sit amet
+                                            consectetur adipisicing elit. Libero
+                                            odio nihil, eos saepe quisquam
+                                            omnis.
+                                        </h4>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="news__footer">
+                            <a class="link link--blue link--article" href="#">
+                                <img
+                                    class="news__icon"
+                                    src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w32"
+                                    alt=""
+                                />View Full Article
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script src="/js/main.js"></script>
     </body>
 </html>

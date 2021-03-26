@@ -19,6 +19,7 @@
     </head>
     <body>
         <div class="search-bar">
+            <span onclick="openNav()"><i class="fas fa-bars"></i></span>
             <form class="form--input" method="GET" role="search">
                 <input
                     class="input"
@@ -28,38 +29,44 @@
                 />
             </form>
         </div>
-        <div id="top-stories">
-            <div class="grid--1x2">
-                <div class="side-bar">
-                    <div class="bar__item">
-                        <a class="link bar__link" href="/top-stories.html">
-                            <div class="bar__icon">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                            <div class="bar__title">
-                                <span>Top Stories</span>
-                            </div>
-                        </a>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                >&times;</a
+            >
+            <div class="bar__item">
+                <a class="link bar__link" href="/top-stories.html">
+                    <div class="bar__icon">
+                        <i class="fas fa-globe"></i>
                     </div>
-                    <div class="bar__item">
-                        <a class="link bar__link" href="#">
-                            <div class="bar__icon">
-                                <i class="far fa-star"></i>
-                            </div>
-                            <div class="bar__title"><span>Following</span></div>
-                        </a>
+                    <div class="bar__title">
+                        <span>Top Stories</span>
+                    </div></a
+                >
+            </div>
+            <div class="bar__item">
+                <a class="link bar__link" href="#">
+                    <div class="bar__icon">
+                        <i class="far fa-star"></i>
                     </div>
-                    <div class="bar__item">
-                        <a class="link bar__link" href="#">
-                            <div class="bar__icon">
-                                <i class="fas fa-film"></i>
-                            </div>
-                            <div class="bar__title">
-                                <span>Entertainment</span>
-                            </div>
-                        </a>
+                    <div class="bar__title"><span>Following</span></div>
+                </a>
+            </div>
+            <div class="bar__item">
+                <a class="link bar__link" href="/entertainment.html">
+                    <div class="bar__icon">
+                        <i class="fas fa-film"></i>
                     </div>
-                </div>
+                    <div class="bar__title">
+                        <span>Entertainment</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Use any element to open the sidenav -->
+
+        <div id="main">
+            <div id="top-stories">
                 <div class="body">
                     <div class="section-title">
                         <div>
@@ -271,6 +278,7 @@
                 </div>
             </div>
         </div>
+
         <script src="/js/main.js"></script>
     </body>
 </html>

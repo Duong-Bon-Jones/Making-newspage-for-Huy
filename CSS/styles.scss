@@ -217,6 +217,19 @@ h2 {
     width: 100%;
     z-index: 2;
     background: $color-blue;
+
+    span {
+        background-color: white;
+        height: 32px;
+        width: 32px;
+        border-radius: 10px;
+        display: grid;
+
+        i {
+            align-self: center;
+            justify-self: center;
+        }
+    }
 }
 
 .form--input {
@@ -248,63 +261,13 @@ h2 {
     }
 }
 
-// Nav side bar
-.side-bar {
-    max-width: 260px;
-    display: none;
-    margin-top: 10rem;
-
-    @include desktop() {
-        display: block;
-    }
-}
-
-.bar__link {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 1rem;
-
-    &:hover {
-        color: $color-blue;
-        .bar__icon {
-            color: $color-blue;
-        }
-    }
-
-    &:focus {
-        background: rgba(66, 133, 244, 0.149);
-        border-top-right-radius: 50px;
-        border-bottom-right-radius: 50px;
-        color: $color-blue;
-        .bar__icon {
-            color: $color-blue;
-        }
-    }
-}
-
-.bar__icon {
-    @include flex-center();
-    height: 2.4rem;
-    width: 2.4rem;
-    margin: 0 1.6rem;
-    color: $color-inactive;
-}
-
-.bar__title {
-    font-weight: 500;
-}
-
 // Body content
 .body {
-    margin-top: 6rem;
+    margin: 6rem auto 0;
     padding: 1.6rem 1.6rem 3.2rem;
     max-width: 768px;
-    @include mobile() {
-        margin: 6rem auto;
-    }
-    @include tablet() {
-        margin: 6rem auto;
+    @include desktop() {
+        padding: 1.6rem 2.5rem 3.2rem;
     }
 }
 
@@ -359,7 +322,7 @@ h2 {
 /* Style the tab content */
 .tabcontent {
     display: none;
-    padding: 6px 12px;
+    // padding: 6px 12px;
     // border: 1px solid #ccc;
     border-top: none;
 }
@@ -444,50 +407,106 @@ h2 {
     }
 }
 
-// * Side nav
+// ! Side nav
+.bar__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+
+    &:hover {
+        color: $color-blue;
+        .bar__icon {
+            color: $color-blue;
+        }
+        background-color: #e3edfe;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+
+    &:focus {
+        background: rgba(66, 133, 244, 0.149);
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        color: $color-blue;
+        .bar__icon {
+            color: $color-blue;
+        }
+    }
+}
+
+.bar__icon {
+    @include flex-center();
+    height: 2.4rem;
+    width: 2.4rem;
+    margin: 0 1.6rem;
+    color: $color-inactive;
+}
+
+.bar__title {
+    font-weight: 500;
+}
+
 /* The side navigation menu */
 .sidenav {
+    margin-top: 10rem;
     height: 100%; /* 100% Full-height */
-    width: 250px; /* 0 width - change this with JavaScript */
+    width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 3; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #111; /* Black*/
+    background-color: white; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 10px 0 lightgray;
+
+    @include desktop() {
+        width: 250px;
+    }
+
+    a {
+        text-decoration: none;
+        transition: 0.3s;
+    }
 }
 
 /* The navigation menu links */
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
+// .sidenav a {
+//     padding: 8px 8px 8px 32px;
+//     text-decoration: none;
+//     font-size: 25px;
+//     color: #818181;
+//     display: block;
+//     transition: 0.3s;
+// }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    color: #f1f1f1;
-}
+// .sidenav a:hover {
+//     color: #f1f1f1;
+// }
 
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
     position: absolute;
-    top: 0;
-    right: 25px;
+    top: 15px;
+    left: 25px;
     font-size: 36px;
-    margin-left: 50px;
+    // margin-left: 50px;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
 #main {
-    margin-left: 250px;
     transition: margin-left 0.5s;
-    padding: 20px;
+    // padding: 20px;
+    max-width: 1140px;
+    @include desktop() {
+        margin-left: 250px;
+    }
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -498,4 +517,15 @@ h2 {
     .sidenav a {
         font-size: 18px;
     }
+}
+
+// ! Following
+#following {
+    .section-title {
+        h2 {
+            font-weight: 700;
+        }
+    }
+    // margin-top: 2.4rem;
+    padding: 3.2rem 0;
 }
