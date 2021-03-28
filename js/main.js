@@ -51,13 +51,13 @@ function closeNav() {
 }
 
 // ! Accordion
-var acc = document.getElementsByClassName("accordion");
+var acc = document.getElementsByClassName("toggler");
 var i;
 
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var panel = this.previousElementSibling;
+        this.parentElement.classList.toggle("active");
+        var panel = this.parentElement.previousElementSibling;
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
         } else {

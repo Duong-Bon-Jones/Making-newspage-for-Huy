@@ -535,9 +535,9 @@ h2 {
 
 .accordion {
     @include flex-space_between();
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
+    // background-color: #eee;
+    // color: #444;
+    // cursor: pointer;
     padding: 18px;
     width: 100%;
     text-align: left;
@@ -546,21 +546,20 @@ h2 {
     transition: 0.4s;
 
     i {
-        transform: rotate(0deg);
-        transition: transform 0.3s;
-
         &:hover {
             color: $color-blue;
         }
+        transform: rotate(0deg);
+        transition: transform 0.3s;
     }
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 
-.active,
-.accordion:hover {
-    background-color: #ccc;
-}
+// .active,
+// .accordion:hover {
+//     background-color: #ccc;
+// }
 
 .active.accordion {
     i {
