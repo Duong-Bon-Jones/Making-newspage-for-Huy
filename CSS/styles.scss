@@ -110,6 +110,8 @@ h2 {
 .news__list {
     padding: 0 2rem;
     color: $color-blue;
+    // margin-top: 1.6rem;
+    // margin-bottom: 0;
     // list-style-position: outside;
     // display: inline;
     // list-style: disc;
@@ -153,7 +155,13 @@ h2 {
 }
 
 .news__header {
-    padding: 1.6rem 13rem 1.6rem 1.6rem;
+    padding: 1.6rem 13rem 1.6rem 2rem;
+
+    @include tabletanddesktop() {
+        h3 {
+            font-size: 2.5rem;
+        }
+    }
 }
 
 .header__source {
@@ -538,7 +546,7 @@ h2 {
     // background-color: #eee;
     // color: #444;
     // cursor: pointer;
-    padding: 18px;
+    padding: 0.5rem 1.8rem 0.5rem 0;
     width: 100%;
     text-align: left;
     border: none;
@@ -551,6 +559,7 @@ h2 {
         }
         transform: rotate(0deg);
         transition: transform 0.3s;
+        cursor: pointer;
     }
 }
 
@@ -580,7 +589,7 @@ h2 {
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
-    padding: 0 18px;
+    // padding: 0 18px;
     background-color: white;
     max-height: 0;
     overflow: hidden;
