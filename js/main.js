@@ -26,9 +26,6 @@ function openCity(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-
 // Nav
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 // ! Sidenav
@@ -52,3 +49,22 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     // document.getElementById("main").style.marginLeft = "0";
 }
+
+// ! Accordion
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.previousElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
