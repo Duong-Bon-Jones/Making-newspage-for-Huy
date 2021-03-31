@@ -287,9 +287,9 @@ h2 {
     grid-template-columns: $gridcol;
 }
 
-@include desktop() {
+@media screen and (min-width: 800px) {
     .grid--1x2 {
-        @include grid(unset, 1fr 3fr);
+        @include grid(unset, 7fr 3fr);
     }
 }
 
@@ -512,7 +512,7 @@ h2 {
 #main {
     transition: margin-left 0.5s;
     // padding: 20px;
-    max-width: 1140px;
+    max-width: 1176px;
     @include desktop() {
         margin-left: 250px;
     }
@@ -598,6 +598,16 @@ h2 {
 }
 
 // ! Side--news
+.right-side {
+    display: none;
+
+    @media screen and (min-width: 800px) {
+        display: block;
+    }
+
+    margin: 16rem 2.5rem 0 0;
+}
+
 .grid--column {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -629,6 +639,7 @@ h2 {
         margin-top: 0.4rem;
         font-weight: 400;
         font-size: 1.4rem;
+        color: rgb(95, 99, 104);
     }
 }
 
