@@ -103,10 +103,6 @@ h2 {
     margin-top: 2.4rem;
 }
 
-.section__heading {
-    font-weight: 500;
-}
-
 // News content
 .news__list {
     padding: 0 2rem;
@@ -193,7 +189,6 @@ h2 {
 }
 
 .news__footer {
-    display: flex;
     a {
         @include flex-center();
         margin: 1rem 1.6rem;
@@ -203,7 +198,7 @@ h2 {
 .news__icon {
     width: 1.6rem;
     height: 1.6rem;
-    margin: 0 0.8rem;
+    margin-right: 0.8rem;
 }
 
 .news__content {
@@ -274,10 +269,13 @@ h2 {
 .body {
     margin: 6rem auto 0;
     padding: 1.6rem 1.6rem 3.2rem;
-    max-width: 768px;
     @include desktop() {
         padding: 1.6rem 2.5rem 3.2rem;
     }
+}
+
+.container768 {
+    max-width: 768px;
 }
 
 // Grid
@@ -403,12 +401,12 @@ h2 {
     }
 
     span {
-        margin: 0 3px;
+        margin-left: 10px;
         font-size: 1.6rem;
         display: none;
     }
-    @media screen and (min-width: 560px) {
-        padding: 0.8rem 1.8rem;
+    @media screen and (min-width: 570px) {
+        padding: 0.8rem 1.5rem;
         span {
             display: block;
         }
@@ -516,6 +514,10 @@ h2 {
     @include desktop() {
         margin-left: 250px;
     }
+
+    @media screen and (min-width: 1676px) {
+        margin: 0 auto;
+    }
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -611,7 +613,7 @@ h2 {
 .grid--column {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 16px 0;
+    gap: 16px;
 }
 
 .side--news {
@@ -681,23 +683,23 @@ h2 {
         font-size: 1.4rem;
         line-height: 1.4;
     }
+}
 
-    .news__header {
-        padding: 0 72px 0 0;
-        position: relative;
-        margin-bottom: 3rem;
+.news__header--side {
+    padding: 0 72px 0 0;
+    position: relative;
+    margin-bottom: 3rem;
 
-        figure {
-            width: 56px;
-            height: 56px;
-            top: 0;
-            right: 0;
-        }
+    figure {
+        width: 56px;
+        height: 56px;
+        top: 0;
+        right: 0;
+    }
 
-        h4 {
-            font-size: 1.4rem;
-            line-height: 1.4;
-        }
+    h4 {
+        font-size: 1.4rem;
+        line-height: 1.4;
     }
 }
 
@@ -778,5 +780,59 @@ h2 {
     a {
         color: $color-blue;
         text-decoration: none;
+    }
+}
+
+// ! Full coverage
+#full-coverage {
+    .section-title {
+        display: block;
+
+        img {
+            vertical-align: middle;
+        }
+    }
+
+    .side__item {
+        grid-column: span 6;
+        margin: 0;
+    }
+
+    .news__header--side {
+        margin: 0;
+
+        h4 {
+            font-size: 1.6rem;
+            margin-right: 20px;
+        }
+        figure {
+            height: 80px;
+            width: 80px;
+        }
+    }
+
+    .section__heading {
+        padding-bottom: 1.3rem;
+        grid-column: span 12;
+        border-bottom: 1px solid #dadce0;
+    }
+
+    .grid--column {
+        gap: 3.2rem;
+        // padding: 3.2rem 0;
+    }
+}
+
+.coverage__item {
+    grid-column: span 12;
+}
+
+.coverage-title {
+    @include flex-space_between();
+    height: 64px;
+
+    span {
+        color: #3c4043;
+        font-weight: 600;
     }
 }
