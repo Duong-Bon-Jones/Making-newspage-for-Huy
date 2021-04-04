@@ -796,6 +796,11 @@ h2 {
     .side__item {
         grid-column: span 6;
         margin: 0;
+
+        @media screen and (max-width: 560px) {
+            grid-column: span 12;
+            // max-width: 100%;
+        }
     }
 
     .news__header--side {
@@ -815,10 +820,15 @@ h2 {
         padding-bottom: 1.3rem;
         grid-column: span 12;
         border-bottom: 1px solid #dadce0;
+        max-width: 100%;
     }
 
     .grid--column {
         gap: 3.2rem;
+
+        @media screen and (max-width: 560px) {
+            gap: 3.2rem 0;
+        }
         // padding: 3.2rem 0;
     }
 }
