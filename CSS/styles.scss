@@ -153,7 +153,7 @@ h2 {
 }
 
 .news__header {
-    padding: 1.6rem 13rem 1.6rem 2rem;
+    padding: 1.6rem 13rem 0 2rem;
 
     @include tabletanddesktop() {
         h3 {
@@ -200,10 +200,8 @@ h2 {
     transform: scale(0.9);
 }
 
-:is(.news__header, .side__item):hover {
-    .mini-menu {
-        opacity: 0.7;
-    }
+:is(.news-card, .side__item):hover .mini-menu {
+    opacity: 0.7;
 }
 
 .header__source {
@@ -211,6 +209,7 @@ h2 {
     align-items: center;
     flex-wrap: wrap;
     margin-top: 1rem;
+    padding-left: 2rem;
 
     small {
         margin-right: 0.5rem;
@@ -709,12 +708,20 @@ h2 {
         font-size: 1.4rem;
         line-height: 1.4;
     }
+
+    .header__source {
+        padding-left: 0;
+    }
+
+    .mini-menu {
+        padding-left: 0;
+    }
 }
 
 .news__header--side {
     padding: 0 72px 0 0;
     position: relative;
-    margin-bottom: 3rem;
+    // margin-bottom: 3rem;
 
     figure {
         width: 56px;
@@ -888,8 +895,8 @@ h2 {
     padding: 5px 15px;
     border-radius: 6px;
     position: absolute;
-    z-index: 1;
-    top: 150%;
+    z-index: 6;
+    top: 100%;
     left: 50%;
     margin-left: -60px;
     font-size: 1rem;
@@ -901,7 +908,7 @@ h2 {
 }
 
 .tooltip:hover .tooltiptext {
-    opacity: 0.7;
+    opacity: 1;
 }
 
 .tooltip .tooltiptext::after {
