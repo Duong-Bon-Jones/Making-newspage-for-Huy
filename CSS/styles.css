@@ -113,6 +113,61 @@ h2 {
   }
 }
 
+.mini-menu {
+  margin: 0;
+  padding-left: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .mini-menu {
+    opacity: 0.7;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    padding-left: 0;
+  }
+}
+
+.mini-menu i {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.mini-menu i:hover {
+  border-color: lightgray;
+  -webkit-box-shadow: 0px 0px 5px 1px lightgray;
+          box-shadow: 0px 0px 5px 1px lightgray;
+}
+
+.mini-menu .tooltiptext {
+  width: 60px;
+  margin-left: -30px;
+}
+
+.side__item .mini-menu {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+:is(.news__header, .side__item):hover .mini-menu {
+  opacity: 0.7;
+}
+
 .header__source {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -925,5 +980,48 @@ h2 {
 .coverage-title span {
   color: #3c4043;
   font-weight: 600;
+}
+
+.tooltip {
+  display: inline-block;
+  position: relative;
+}
+
+/* Tooltip text */
+.tooltiptext {
+  width: 120px;
+  background-color: #202124;
+  color: #fff;
+  text-align: center;
+  padding: 5px 15px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+  font-size: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.tooltip:hover .tooltiptext {
+  opacity: 1;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
 }
 /*# sourceMappingURL=styles.css.map */
