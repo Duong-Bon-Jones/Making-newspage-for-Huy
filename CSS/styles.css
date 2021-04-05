@@ -104,7 +104,7 @@ h2 {
 }
 
 .news__header {
-  padding: 1.6rem 13rem 0 2rem;
+  padding: 1.6rem 13rem 1.6rem 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -164,7 +164,7 @@ h2 {
           transform: scale(0.9);
 }
 
-:is(.news-card, .weather, .side__item):hover .mini-menu {
+:is(.news__header, .side__item):hover .mini-menu {
   opacity: 0.7;
 }
 
@@ -178,7 +178,6 @@ h2 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 1rem;
-  padding-left: 2rem;
 }
 
 .header__source small {
@@ -778,17 +777,10 @@ h2 {
   line-height: 1.4;
 }
 
-.side__item .header__source {
-  padding-left: 0;
-}
-
-.side__item .mini-menu {
-  padding-left: 0;
-}
-
 .news__header--side {
   padding: 0 72px 0 0;
   position: relative;
+  margin-bottom: 3rem;
 }
 
 .news__header--side figure {
@@ -997,8 +989,8 @@ h2 {
   padding: 5px 15px;
   border-radius: 6px;
   position: absolute;
-  z-index: 6;
-  top: 100%;
+  z-index: 1;
+  top: 150%;
   left: 50%;
   margin-left: -60px;
   font-size: 1rem;
@@ -1009,7 +1001,7 @@ h2 {
 }
 
 .tooltip:hover .tooltiptext {
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .tooltip .tooltiptext::after {
