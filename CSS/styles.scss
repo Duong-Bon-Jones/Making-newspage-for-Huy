@@ -889,7 +889,7 @@ h2 {
     border-radius: 6px;
     position: absolute;
     z-index: 1;
-    top: 150%;
+    top: 110%;
     left: 50%;
     margin-left: -60px;
     font-size: 1rem;
@@ -901,7 +901,7 @@ h2 {
 }
 
 .tooltip:hover .tooltiptext {
-    opacity: 0.7;
+    opacity: 1;
 }
 
 .tooltip .tooltiptext::after {
