@@ -12,6 +12,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="/CSS/styles.css" />
+
         <script
             src="https://kit.fontawesome.com/e31ef2b53f.js"
             crossorigin="anonymous"
@@ -22,11 +23,17 @@
             <span onclick="openNav()"><i class="fas fa-bars"></i></span>
             <form class="form--input" method="GET" role="search">
                 <input
+                    list="searchRecommend"
                     class="input"
                     autocomplete="off"
                     placeholder="Search ..."
                     type="text"
                 />
+                <datalist id="searchRecommend">
+                    <option >Option 1</option>
+                    <option >Option 2</option>
+                    <option >Option 3</option>
+                </datalist>
             </form>
         </div>
 
